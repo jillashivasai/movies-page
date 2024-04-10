@@ -1,0 +1,95 @@
+/* header.css */
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 95%;
+    margin-left: 40px;
+    /* Consider removing this margin */
+}
+
+.lis {
+    margin-right: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none !important;
+    /* Remove underline */
+}
+
+ul {
+    display: flex;
+}
+
+input {
+    width: 200px;
+}
+
+.logo {
+    color: rgb(3, 11, 125);
+    text-decoration: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: oblique;
+}
+
+@media screen and (max-width: 576px) {
+    .nav {
+        padding-left: 30px;
+        padding-right: 30px;
+        width: 100%;
+        /* Use full width for smaller screens */
+        flex-wrap: wrap;
+        /* Allow wrapping for smaller screens */
+        margin-left: 0px;
+        /* Remove the margin */
+    }
+
+    .navbar {
+        background-color: #fff;
+    }
+
+    input {
+        width: 100%;
+        /* Adjust input width for smaller screens */
+        max-width: 200px;
+        /* Limit maximum width of input */
+    }
+
+    .lis {
+        margin-right: 5px;
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    ul {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: block;
+        cursor: pointer;
+    }
+
+    .show-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #fff;
+        /* Add background color for better visibility */
+        position: absolute;
+        top: 100%;
+        /* Position below the navbar */
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+        /* Add some padding for spacing */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        /* Add shadow for better separation */
+    }
+
+    .show-menu .lis {
+        margin: 10px 0;
+        /* Add margin to each link for spacing */
+    }
+}
